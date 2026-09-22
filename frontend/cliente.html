@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha Conta</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>👤 Minha Conta</h1>
+  <nav>
+    <a href="index.html">Loja</a>
+    <a href="cliente.html">Minha Conta</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Cadastro de Cliente</h2>
+    <form id="formCliente">
+      <input id="cNome" placeholder="Nome" required>
+      <input id="cEmail" placeholder="Email" required>
+      <input id="cTelefone" placeholder="Telefone">
+      <input id="cEndereco" placeholder="Endereço">
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p id="msgCadastro"></p>
+  </section>
+
+  <section>
+    <h2>Meus dados e pedidos</h2>
+    <p>Digite o ID (RowKey) que você recebeu no cadastro para ver e editar seus dados.</p>
+    <input id="buscaId" placeholder="Meu ID de Cliente">
+    <button onclick="buscarCliente()">Buscar</button>
+
+    <div id="dadosCliente"></div>
+
+    <h3>Histórico de Pedidos</h3>
+    <ul id="listaPedidos"></ul>
+  </section>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/cliente.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loja - E-commerce Pedro Lacerda</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Minha Loja</h1>
+  <nav>
+    <a href="index.html">Loja</a>
+    <a href="cliente.html">Minha Conta</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+
+<main>
+  <section id="filtros">
+    <h2>Filtrar produtos</h2>
+    <input id="fMarca" placeholder="Marca">
+    <input id="fModelo" placeholder="Modelo">
+    <input id="fPrecoMin" type="number" placeholder="Preço mín.">
+    <input id="fPrecoMax" type="number" placeholder="Preço máx.">
+    <button onclick="carregarProdutos()">Buscar</button>
+  </section>
+
+  <section>
+    <h2>Produtos disponíveis</h2>
+    <div id="produtos" class="grid"></div>
+  </section>
+
+  <section id="carrinho">
+    <h2>Carrinho</h2>
+    <ul id="listaCarrinho"></ul>
+    <p><strong>Total: R$ <span id="totalCarrinho">0.00</span></strong></p>
+
+    <h3>Finalizar Pedido</h3>
+    <input id="clienteId" placeholder="ID do Cliente (RowKey)">
+    <select id="metodoPagamento">
+      <option value="cartao">Cartão</option>
+      <option value="pix">Pix</option>
+      <option value="boleto">Boleto</option>
+    </select>
+    <select id="metodoEntrega">
+      <option value="padrao">Entrega padrão</option>
+      <option value="expressa">Entrega expressa</option>
+      <option value="retirada">Retirada na loja</option>
+    </select>
+    <button onclick="finalizarPedido()">Finalizar Pedido</button>
+    <p id="msgPedido"></p>
+  </section>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/loja.js"></script>
+</body>
+</html>
